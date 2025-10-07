@@ -397,6 +397,56 @@ button, .btn{
   border: 0;
 }
 
+.design-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 32px;
+}
+
+.design-panel {
+  padding: 24px 28px;
+  border: 1px solid rgba(10,75,120,0.12);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.design-panel--wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .design-panel--wide {
+    grid-column: span 1;
+  }
+}
+
+.design-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.design-points li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.55;
+}
+
+.design-points li::before {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent, #2f9e44);
+}
+
 .stats-banner{
   margin-top: 32px;
   background: linear-gradient(135deg, rgba(10,75,120,0.18), rgba(47,158,68,0.2));
