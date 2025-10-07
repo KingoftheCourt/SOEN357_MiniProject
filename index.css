@@ -116,7 +116,7 @@ button, .btn{
   gap: 14px;
   color: inherit;
 }
-.brand-icon{
+/* .brand-icon{
   width: 48px;
   height: 48px;
   border-radius: 14px;
@@ -126,7 +126,17 @@ button, .btn{
   background: linear-gradient(140deg, var(--primary), #1168a6);
   color: #fff;
   box-shadow: var(--shadow);
+} */
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  border-radius: 12px;
+  object-fit: contain;
+  background: transparent;
 }
+
 .brand-text{ display: flex; flex-direction: column; }
 .brand-name{ font-size: 1.28rem; font-weight: 800; }
 .brand-tagline{ font-size: 0.95rem; color: var(--muted); }
