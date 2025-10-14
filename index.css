@@ -127,6 +127,38 @@ button, .btn{
   color: #fff;
   box-shadow: var(--shadow);
 } */
+ /* Make logo icon-only feel like a badge */
+.brand--icon-only {
+  padding: 8px;                      /* badge padding */
+  border-radius: 9999px;             /* fully rounded */
+  background: rgba(10, 75, 120, 0.06); /* soft tint that matches your palette */
+  box-shadow: 0 4px 14px rgba(10, 75, 120, 0.18);
+  border: 1px solid rgba(10, 75, 120, 0.18);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+/* Slightly larger logo + circular crop */
+.brand--icon-only .brand-icon {
+  width: 44px;   /* bump from default ~32px */
+  height: 44px;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Hover/focus: lift and glow */
+.brand--icon-only:hover,
+.brand--icon-only:focus-visible {
+  transform: translateY(-1px) scale(1.04);
+  background: rgba(10, 75, 120, 0.10);
+  box-shadow: 0 10px 26px rgba(10, 75, 120, 0.28);
+  outline: none;
+}
+
+/* Keep nav pushed to the right even without brand text width */
+.site-nav { margin-left: auto; }
+
+/* (Optional) reduce header height a touch since we lost text bulk */
+.site-header { padding-block: 10px; }
 
 .brand-icon {
   width: 48px;
@@ -155,6 +187,12 @@ button, .btn{
 }
 .site-nav a:hover,
 .site-nav a:focus{ color: var(--primary); border-bottom-color: var(--accent); text-decoration: none; }
+
+.site-header .header-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 .header-actions{ display: flex; align-items: center; gap: 16px; }
 .header-link{ color: var(--muted); font-weight: 600; }
